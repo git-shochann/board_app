@@ -1,24 +1,38 @@
-# README
+# DB設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+`まずは基本的な機能を実装し、後ほど機能を追加`
+`userモデルに関してはdeviseを使用`
 
-Things you may want to cover:
+## usersテーブル 
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false, unique: true|
+### アソシエーション
+- has_many :boards
+- has_many :cards
 
-* Ruby version
 
-* System dependencies
+## boardsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|user|references|null: false, foreign_key: true|
+### アソシエーション
+- belongs_to :user
+- has_many :cards
 
-* Configuration
 
-* Database creation
+## cardsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|content|string|null: false|
+|board|references|null: false, foreign_key: true|
+### アソシエーション
+- belongs_to :board
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<!-- references型にすると
+1.インデックスを自動的に貼る
+2.カラム名をuserとしてもuser_idとして保存してくれる  -->
