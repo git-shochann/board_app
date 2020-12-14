@@ -1,0 +1,70 @@
+
+/* ----------------------------------------------  */
+/* リセットCSS */
+body {
+  background-color: #f0f0f0;
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+/* ---------------------------------------------- */
+/* ヘッダー部分 */
+header {
+  background-color: pink;
+  height: 150px;
+}
+
+.heading {
+  height: 100px;
+  width: 960px;
+  background-color: limegreen;
+}
+
+.navbar {
+  height: 50px;
+  width: 960px;
+  background-color: violet;
+}
+/* ---------------------------------------------- */
+/* コンテンツ部分 */
+
+.contents {
+  /* height: 400px; 小要素に合わせて変動する為contents固定の高さは削除！ */
+  width: 960px;
+  background-color: skyblue;
+}
+
+.left-content {
+  height: 400px;
+  width: 640px;
+  background-color: #ffffff;
+  float: left;
+}
+
+.right-content {
+  height: 370px;
+  width: 320px;
+  background-color: #f9f9f9;
+  float: left;
+}
+
+/* ---------------------------------------------- */
+/* フッター部分 */
+
+footer {
+  background-color: pink;
+  height: 50px;
+}
+
+/* ---------------------------------------------- */
+/* clearfixクラス */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}

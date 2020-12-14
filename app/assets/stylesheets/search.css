@@ -1,0 +1,23 @@
+/* searchformに対するCSS */
+
+.container {
+  text-align: center;
+}
+
+.search_form {
+  height: 30px;
+  width: 175px;
+}
+
+
+/* searchに対するCSS */
+
+.zipcode {
+  text-align: center;
+
+}
+
+
+.style {
+  text-align: center;
+}
